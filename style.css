@@ -146,12 +146,10 @@ body{
 }
 
 .card-container img{ 
-  max-width: 100%;
-}
-.img-container{
+  max-width: 100%; 
+  display: block;
+  margin-left: auto;
   margin-top: 3rem;
-  display: flex;
-  justify-self: flex-end;
 }
 
 /* ''''''''''''''''''''''''''''''' */

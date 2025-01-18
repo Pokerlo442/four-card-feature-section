@@ -46,15 +46,12 @@
 }
 
 body{
-  /* min-height: 100vh; */
-  background-color: var(--clr-veryLightGray);
-}
-
-.container{
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  background-color: var(--clr-veryLightGray);
 }
+
 /* ''''''''''''''''''''''''''''''' */
         /* Heading Section  */
 /* ''''''''''''''''''''''''''''''' */

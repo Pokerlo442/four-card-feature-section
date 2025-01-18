@@ -60,8 +60,7 @@ body{
   margin-bottom: 3.8rem;
   margin-inline: 1rem;  
 }
-.main-header{
-  
+.main-header{  
   text-align: center;
   color: var(--clr-veryDarkBlue);
   font-weight: var(--fw-light);
@@ -99,21 +98,9 @@ body{
   max-width: 1110px;
   margin-inline: auto;
 }
-
-/* ''''''''''''''''''''''''''''''' */
-        /* Card Section  */
-/* ''''''''''''''''''''''''''''''' */
-
-.card-container{
-  background-color: white;
-  box-shadow: 0px 19px 35px -15px rgba(131, 167, 210, 0.5);
-  padding:1.5rem 2rem;
-  border-radius: 8px;
-}
 .card-container:nth-child(1){
   /* Supervisor */
   border-top: 5px solid var(--clr-cyan);
-
   grid-area: 2 / 1 / 4 / 2;
 }
 .card-container:nth-child(2){
@@ -131,6 +118,18 @@ body{
   border-top: 5px solid var(--clr-blue);
   grid-area: 2 / 3 / 4 / 4;
 }
+
+/* ''''''''''''''''''''''''''''''' */
+        /* Card Section  */
+/* ''''''''''''''''''''''''''''''' */
+
+.card-container{
+  background-color: white;
+  box-shadow: 0px 19px 35px -15px rgba(131, 167, 210, 0.5);
+  padding:1.5rem 2rem;
+  border-radius: 8px;
+}
+
 .header{
   font-size: 1.25rem;
   color: var(--clr-veryDarkBlue);

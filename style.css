@@ -1,0 +1,205 @@
+:root{
+  /* Colors */
+  /* Primary */
+  --clr-red:hsl(0, 78%, 62%);
+  --clr-cyan:hsl(180, 62%, 55%);
+  --clr-orange:hsl(34, 97%, 64%);
+  --clr-blue:hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --clr-veryDarkBlue:hsl(234, 12%, 34%);
+  --clr-grayishBlue: hsl(229, 6%, 66%);
+  --clr-veryLightGray: hsl(0, 0%, 98%);
+
+  /* Typography */
+    /*Font size*/
+  --fs-p:0.938rem;
+
+  /* Font weight */
+  --fw-light:200;
+  --fw-normal:400;
+  --fw-bold:600;
+}
+@font-face {
+  font-family: 'Poppins';
+  src:url(./fonts/Poppins/Poppins-ExtraLight.ttf) format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src:url(./fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src:url(./fonts/Poppins/Poppins-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  /* min-height: 100vh; */
+  background-color: var(--clr-veryLightGray);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+/* ''''''''''''''''''''''''''''''' */
+        /* Heading Section  */
+/* ''''''''''''''''''''''''''''''' */
+.header-container{
+  margin-top: 5rem;
+  margin-bottom: 3.8rem;
+  margin-inline: 1rem;  
+}
+.main-header{
+  
+  text-align: center;
+  color: var(--clr-veryDarkBlue);
+  font-weight: var(--fw-light);
+  font-size: 2.25rem;
+  letter-spacing: .25px;
+  line-height: 140%;}
+
+.main-header span{
+  display: block;
+  font-weight: var(--fw-bold);
+  margin-bottom: 1rem;
+  padding-top: 0.1rem;
+
+}
+.main-text{
+  text-align: center;
+  max-width: 550px;
+  margin-inline: auto;
+  color: var(--clr-grayishBlue);
+  letter-spacing: .1px;
+  font-weight: var(--fw-normal);
+
+}
+
+/* ''''''''''''''''''''''''''''''' */
+        /* Grid Section  */
+/* ''''''''''''''''''''''''''''''' */
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:120px 120px 120px 120px;
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+  max-width: 1110px;
+  margin-inline: auto;
+}
+
+/* ''''''''''''''''''''''''''''''' */
+        /* Card Section  */
+/* ''''''''''''''''''''''''''''''' */
+
+.card-container{
+  background-color: white;
+  box-shadow: 0px 19px 35px -15px rgba(131, 167, 210, 0.5);
+  padding:1.5rem 2rem;
+  border-radius: 8px;
+}
+.card-container:nth-child(1){
+  /* Supervisor */
+  border-top: 5px solid var(--clr-cyan);
+
+  grid-area: 2 / 1 / 4 / 2;
+}
+.card-container:nth-child(2){
+  /* Team Builder */
+  border-top: 5px solid var(--clr-red);
+  grid-area: 1 / 2 / 3 / 3;
+}
+.card-container:nth-child(3){
+  /* Karma*/
+  border-top: 5px solid var(--clr-orange);
+  grid-area: 3 / 2 / 5 / 3;
+}
+.card-container:nth-child(4){
+  /* Calculator */
+  border-top: 5px solid var(--clr-blue);
+  grid-area: 2 / 3 / 4 / 4;
+}
+.header{
+  font-size: 1.25rem;
+  color: var(--clr-veryDarkBlue);
+  font-weight: var(--fw-bold);
+  margin-bottom: .5rem;
+}
+.text{
+  font-size:.813rem;
+  color: var(--clr-grayishBlue);
+  font-weight: var(--fw-normal);
+  letter-spacing: 0.09px;
+  line-height: 164%;
+}
+
+.card-container img{
+  margin-top: 3rem;
+  display: flex;
+  justify-self: flex-end;
+  max-width: 100%;
+}
+
+/* ''''''''''''''''''''''''''''''' */
+    /* attribution Section  */
+/* ''''''''''''''''''''''''''''''' */
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ''''''''''''''''''''''''''''''' */
+      /* media queries  */
+/* ''''''''''''''''''''''''''''''' */
+
+@media (max-width:69.375em ) {
+  .grid-container{
+    justify-items: center;
+  }
+ .card-container{
+  width: clamp(95%, 95%, 100%);
+  margin-inline: auto;
+ }
+ .card-container:nth-child(1), .card-container:nth-child(2), .card-container:nth-child(3),.card-container:nth-child(4){
+  grid-area: auto;
+  margin: .8rem 1rem;
+  }
+  .grid-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-inline: 1rem;
+    row-gap: initial;
+  }
+  .card-container img{
+    margin-top: 2rem;
+    max-width: 22.5%;
+  }
+  .main-header{
+    font-size: 1.5rem;
+  }
+  .main-header span{
+    margin-top: .25rem;
+  }
+
+}
